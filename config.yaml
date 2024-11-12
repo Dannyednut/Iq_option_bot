@@ -1,0 +1,40 @@
+# config.yaml
+credentials:
+  email: "dannyednut88@gmail.com"
+  password: "Tunddy20"
+  telegram_token: "7762767790:AAGHDLDc2pn-j68x0Ni4X1mYfCHlq6sSPbU"
+
+channels:
+  - "-1002254756283"
+
+trading:
+  account_type: "PRACTICE"  # or "REAL"
+  default_symbol: "GBPUSD"
+  amount: 10
+  timeframe: 60  # in seconds
+
+risk_management:
+  stop_loss_percent: 10
+  take_profit_percent: 10
+  
+gale_settings:
+  enabled: true
+  max_gale: 3
+  multiplier: 2
+
+indicators:
+  rsi:
+    period: 14
+    overbought: 70
+    oversold: 30
+  bollinger_bands:
+    period: 20
+    std_dev: 2
+  ema:
+    period: 100
+
+telegram_messages:
+  trade_open: "📈 {symbol}-{direction} @ {entry_price}\n💰 Amount: {amount}\n🛑 Expiration: {expiration} minutes(M{expiration})\n🚀 Maximum: {gale} Martingale\n===================================\n➡"
+  trade_close: "📈 {symbol}-{direction} @ {entry_price}\n💰 Amount: {amount}\n🛑 Expiration: {expiration} minutes(M{expiration})\n🚀 Maximum: {gale} Martingale\n===================================\n➡ {result}"
+  gale_notification: "⚠️ Gale attempt {gale_count} - Amount increased to {new_amount}"
+  trade_error: "❌{id}"
